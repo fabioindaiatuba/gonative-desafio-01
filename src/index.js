@@ -29,6 +29,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
+  post: {
+    marginTop: 20,
+    marginHorizontal: 20,
+  },
 });
 
 export default class App extends Component {
@@ -36,21 +40,39 @@ export default class App extends Component {
     posts: [
       {
         id: 1,
-        titulo: "Primeiro post",
-        autor: "Fabio Gonçalves",
-        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        titulo: 'Primeiro post',
+        autor: 'Fabio Gonçalves',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       },
       {
         id: 2,
-        titulo: "Segundo Post",
-        autor: "Fabio Gonçalves",
-        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        titulo: 'Segundo Post',
+        autor: 'Fabio Gonçalves',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       },
       {
         id: 3,
-        titulo: "Terceiro Post",
-        autor: "Fabio Gonçalves",
-        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        titulo: 'Terceiro Post',
+        autor: 'Fabio Gonçalves',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+      {
+        id: 4,
+        titulo: 'Quarto Post',
+        autor: 'Fabio Gonçalves',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+      {
+        id: 5,
+        titulo: 'Quinto Post',
+        autor: 'Fabio Gonçalves',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+      {
+        id: 6,
+        titulo: 'Sexto Post',
+        autor: 'Fabio Gonçalves',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       },
     ],
   };
@@ -62,8 +84,14 @@ export default class App extends Component {
           <Text style={styles.txtTitulo}>GoNative App</Text>
         </View>
         <ScrollView >
-          { this.state.posts.map(post =>
-            <Post key={post.id} titulo={post.titulo} autor={post.autor} descricao={post.descricao} />)
+          { this.state.posts.map(post => (
+            <Post
+              style={styles.post}
+              key={post.id}
+              titulo={post.titulo}
+              autor={post.autor}
+              descricao={post.descricao}
+            />))
           }
         </ScrollView>
       </View>

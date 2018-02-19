@@ -1,23 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   Text,
   View,
 } from 'react-native';
-
-export default class Post extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.txtTitulo}>{this.props.titulo}</Text>
-        <Text style={styles.txtAutor}>{this.props.autor}</Text>
-        <View style={styles.descricao}>
-          <Text style={styles.txtDescricao}>{this.props.descricao}</Text>
-        </View>
-      </View>
-    );
-  }
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -25,8 +11,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     padding: 20,
     borderRadius: 10,
-    marginTop: 20,
-    marginHorizontal: 20,
   },
   txtTitulo: {
     color: '#333333',
@@ -34,7 +18,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   txtAutor: {
-    color: "#999999",
+    color: '#999999',
     marginBottom: 10,
   },
   descricao: {
@@ -43,6 +27,20 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   txtDescricao: {
-    color: "#666666",
-  }
+    color: '#666666',
+  },
 });
+
+const Post = props => (
+  <View style={[styles.container, props.style]}>
+    <Text style={styles.txtTitulo}>{props.titulo}</Text>
+    <Text style={styles.txtAutor}>{props.autor}</Text>
+    <View style={styles.descricao}>
+      <Text style={styles.txtDescricao}>{props.descricao}</Text>
+    </View>
+  </View>
+);
+
+
+export default Post;
+

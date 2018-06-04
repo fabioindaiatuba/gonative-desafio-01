@@ -1,6 +1,6 @@
 # Desafio Módulo 01 - GoNative
 
-![](https://github.com/fabioindaiatuba/gonative-desafio-01/raw/master/telas/tela1.png)
+![](https://github.com/fabioindaiatuba/gonative-desafio-01/raw/master/snapshots/tela1.png)
 
 ### Funções
 
